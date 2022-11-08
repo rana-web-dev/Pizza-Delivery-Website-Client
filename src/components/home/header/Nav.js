@@ -10,7 +10,7 @@ const Nav = () => {
         <Link to=''>Order</Link>,
         <Link to=''>Review</Link>,
         <Link to='/blog'>Blogs</Link>,
-        <Link to=''>LogIn</Link>,
+        <Link to='/logIn'>LogIn</Link>,
     ]
 
     return (

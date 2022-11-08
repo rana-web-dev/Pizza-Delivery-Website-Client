@@ -4,6 +4,8 @@ import Blogs from "../components/home/blog/Blogs";
 import ServicesDetails from "../components/home/details/ServicesDetails";
 import Home from "../components/home/home/Home";
 import AllService from "../components/home/services/AllService";
+import LogIn from "../components/logIn/LogIn";
+import SignUp from "../components/signUp/SignUp";
 import Main from "../layout/Main";
 
 
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
             {
                 path: '/allReviews',
                 element: <AllReviews></AllReviews>
+            },
+            {
+                path: '/logIn',
+                element: <LogIn></LogIn>
+            },
+            {
+                path: '/signUp',
+                element: <SignUp></SignUp>
             },
             {
                 path: '/details/:id',
