@@ -6,7 +6,7 @@ const Nav = () => {
 
     const items = [
         <Link to=''>Home</Link>,
-        <Link to=''>About US</Link>,
+        <Link to=''>About Me</Link>,
         <Link to=''>Order</Link>,
         <Link to=''>Review</Link>,
         <Link to=''>LogIn</Link>,
