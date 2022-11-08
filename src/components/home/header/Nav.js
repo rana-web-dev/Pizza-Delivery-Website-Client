@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Nav = () => {
 
     const items = [
-        <Link to=''>Home</Link>,
+        <Link to='/home'>Home</Link>,
         <Link to=''>About Me</Link>,
         <Link to=''>Order</Link>,
         <Link to=''>Review</Link>,
