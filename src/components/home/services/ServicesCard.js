@@ -1,5 +1,6 @@
 import React from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
+import { Link } from 'react-router-dom';
 
 const ServicesCard = ({ srv }) => {
     const { id, title, img, des, price } = srv;
@@ -21,7 +22,9 @@ const ServicesCard = ({ srv }) => {
                 </h2>
                 <p className='text-bold text-orange-400 text-2xl'>Price: {price}</p>
                 <p>{desSlice}</p>
-                <button className='btn border-none bg-orange-400'>Details</button>
+                <Link to={`/details/${id}`}>
+                    <button className='btn border-none bg-orange-400'>Details</button>
+                </Link>
             </div>
         </div>
     );

@@ -1,16 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../context/AuthProvider';
 import ServicesCard from './ServicesCard';
 
 const Service = () => {
-    const [serviceData, setService] = useState([]);
+    
+    const { serviceData } = useContext(AuthContext);
     const serviceDataSlice = serviceData.slice(0, 3);
-
-    useEffect(() => {
-        fetch('http://localhost:5000/service')
-            .then(res => res.json())
-            .then(data => setService(data))
-    }, [])
 
     return (
         <div className='max-w-screen-xl mx-auto py-20'>

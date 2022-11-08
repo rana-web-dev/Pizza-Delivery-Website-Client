@@ -1,5 +1,7 @@
-.navbar-end a {
-    margin-left: 15px;
-    color: white;
-    font-weight: 500;
+@media screen and (min-width: 700px) {
+    .navbar a {
+        margin-left: 15px;
+        color: white;
+        font-weight: 500;
+    }
 }
