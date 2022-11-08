@@ -9,8 +9,8 @@ const Banner = () => {
                 <img src={require('../../../images/pizza.png')} alt='' />
                 </div>
                 <div>
-                    <h1 className="text-7xl font-bold">I will deliver <br></br> pizza to your Home!</h1>
-                    <p className="py-6">Pizza is any substance consumed to provide nutritional support for an organism.</p>
+                    <h1 className="text-7xl font-bold">I will deliver pizza to your Home!</h1>
+                    <p className="py-6 text-2xl">This service will available for Mymensingh town. </p>
                     <button className="btn bg-orange-400 border-none">Book A Table</button>
                 </div>
             </div>
