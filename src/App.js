@@ -1,4 +1,5 @@
 import './App.css';
+import 'react-photo-view/dist/react-photo-view.css';
 import router from './router/Routes';
 import { RouterProvider } from 'react-router-dom';
 
