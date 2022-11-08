@@ -1,6 +1,11 @@
 import React from 'react';
+import useTitle from '../../../title/title';
 
 const Blogs = () => {
+
+    // Add Dynamic Title
+    useTitle('Blog');
+
     return (
         <div className='max-w-screen-xl mx-auto'>
             <h2 className='text-center text-5xl text-semibold py-10 mt-5'>Interview Questions</h2>

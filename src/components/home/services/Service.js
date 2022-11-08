@@ -1,9 +1,13 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider';
+import useTitle from '../../../title/title';
 import ServicesCard from './ServicesCard';
 
 const Service = () => {
+
+    // Add Dynamic Title
+    useTitle('Services');
     
     const { serviceData } = useContext(AuthContext);
     const serviceDataSlice = serviceData.slice(0, 3);

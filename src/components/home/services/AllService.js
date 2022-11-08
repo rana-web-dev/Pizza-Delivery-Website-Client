@@ -1,10 +1,14 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../context/AuthProvider';
+import useTitle from '../../../title/title';
 import AllServiceCard from './AllServiceCard';
 
 const AllService = () => {
 
     const { serviceData } = useContext(AuthContext);
+
+    // Add Dynamic Title
+    useTitle('All Services');
 
     return (
         <div className='max-w-screen-xl mx-auto py-20'>

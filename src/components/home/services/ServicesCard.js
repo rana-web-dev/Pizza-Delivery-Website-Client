@@ -21,7 +21,7 @@ const ServicesCard = ({ srv }) => {
                     Pizza: <h2>{title}</h2>
                 </h2>
                 <p className='text-bold text-orange-400 text-2xl'>Price: {price}</p>
-                <p>{desSlice}</p>
+                <p>{desSlice}...</p>
                 <Link to={`/details/${id}`}>
                     <button className='btn border-none bg-orange-400'>Details</button>
                 </Link>
