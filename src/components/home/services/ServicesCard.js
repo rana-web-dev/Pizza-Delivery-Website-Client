@@ -6,7 +6,7 @@ const ServicesCard = ({ srv }) => {
     const { id, title, img, des, price } = srv;
     const desSlice = des.slice(0, 100);
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-full lg:w-96 mx-auto bg-base-100 shadow-xl">
             <figure>
             <PhotoProvider>
                     <div className="foo">

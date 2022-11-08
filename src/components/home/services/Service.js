@@ -16,7 +16,7 @@ const Service = () => {
         <div className='max-w-screen-xl mx-auto py-20'>
             <h1 className='pb-4 text-5xl text-center font-semibold'>I will deliver below type of Pizza,<br></br>This service will be quick on time. </h1>
             <p className='text-center pb-20 text-2xl'>Check out this list of services and then order to me.</p>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+            <div className='grid grid-cols-1 gap-5 lg:gap-10 md:grid-cols-2 lg:grid-cols-3'>
                 {
                     serviceDataSlice.map(srv => <ServicesCard
                         key={srv.id}

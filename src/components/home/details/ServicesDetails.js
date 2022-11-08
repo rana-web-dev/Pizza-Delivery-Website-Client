@@ -1,7 +1,4 @@
-// import React, { useContext } from 'react';
-// import { AuthContext } from '../../../context/AuthProvider';
-// import ServicesDetailsCard from '../services/ServicesDetailsCard';
-
+import React from 'react';
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import { Link, useLoaderData } from "react-router-dom";
 import useTitle from "../../../title/title";
@@ -11,7 +8,6 @@ const ServicesDetails = () => {
     // Add Dynamic Title
     useTitle('Services Details')
 
-    // const { serviceData } = useContext(AuthContext);
 
     const data = useLoaderData();
     const { id, img, title, des, price, revImg, revName, revDes } = data;

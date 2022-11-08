@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './nav.css';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../context/AuthProvider';
 
 const Nav = () => {
 
-    const items = [
+    const {user, logOut} = useContext(AuthContext);
+
+    const items = <>
         <Link to='/home'>Home</Link>,
-        <Link to=''>About Me</Link>,
-        <Link to=''>Order</Link>,
-        <Link to=''>Review</Link>,
         <Link to='/blog'>Blogs</Link>,
-        <Link to='/logIn'>LogIn</Link>,
-    ]
+        {
+            user?.email ?
+            <>
+            <Link to='' >My Review</Link>
+            <Link to='' >Add Review</Link>
+            <Link to='' onClick={logOut}>LogOut</Link>
+            </>
+            :
+            <Link to='/login'>LogIn</Link>
+        }
+    </>
 
     return (
         <div className='bg-orange-400'>

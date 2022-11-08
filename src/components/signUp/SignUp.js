@@ -6,8 +6,6 @@ const SignUp = () => {
 
     const {createUser} = useContext(AuthContext);
 
-
-
     const handleSignUp = event => {
         event.preventDefault();
         const form = event.target;
@@ -23,10 +21,10 @@ const SignUp = () => {
     }
 
     return (
-        <div className="hero bg-base-200">
-            <div className="hero-content">
-                <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100">
-                    <form onSubmit={handleSignUp} className="card-body w-96">
+        <div className="hero bg-base-200 max-w-screen-xl mx-auto">
+            <div className="hero-content w-full lg:w-1/2">
+                <div className="card w-full shadow-2xl bg-base-100">
+                    <form onSubmit={handleSignUp} className="card-body w-full">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>
