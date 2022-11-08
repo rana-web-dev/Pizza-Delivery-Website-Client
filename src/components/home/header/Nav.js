@@ -9,6 +9,7 @@ const Nav = () => {
         <Link to=''>About Me</Link>,
         <Link to=''>Order</Link>,
         <Link to=''>Review</Link>,
+        <Link to='/blog'>Blogs</Link>,
         <Link to=''>LogIn</Link>,
     ]
 
