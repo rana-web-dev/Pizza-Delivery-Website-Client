@@ -5,6 +5,7 @@ import ServicesDetails from "../components/home/details/ServicesDetails";
 import Home from "../components/home/home/Home";
 import AllService from "../components/home/services/AllService";
 import LogIn from "../components/logIn/LogIn";
+import PrivateRoute from "../components/privateRoute/PrivateRoute";
 import SignUp from "../components/signUp/SignUp";
 import Main from "../layout/Main";
 
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/allReviews',
-                element: <AllReviews></AllReviews>
+                element: <PrivateRoute><AllReviews></AllReviews></PrivateRoute>
             },
             {
                 path: '/logIn',
