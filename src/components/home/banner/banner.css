@@ -1,0 +1,7 @@
+.hero {
+    background: linear-gradient(#ffffffbb, #ffffffbb), url('./img/pizza-bg.jpg');
+    height: 70vh;
+}
+.hero .hero-content img{
+    box-shadow: 0px 0px 10px 1px black;
+}
