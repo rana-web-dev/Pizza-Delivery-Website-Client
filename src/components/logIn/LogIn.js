@@ -15,6 +15,8 @@ const LogIn = () => {
         const email = form.email.value;
         const password = form.password.value;
 
+        
+
         logIn(email, password)
             .then(result => {
                 const user = result.user;
@@ -25,7 +27,23 @@ const LogIn = () => {
                 }
             })
             .catch(error => console.log(error));
+
+
     }
+
+    const handleGoogleLogIn = () => {
+        googleSignIn()
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+            navigate(from, {replace: true})
+            if(loading){
+                return <h1 className='text-5xl'>Loading...</h1>
+            }
+        })
+        .catch(error => console.log(error));
+    }
+
 
 
     return (
@@ -49,7 +67,7 @@ const LogIn = () => {
                             <button className="btn btn-primary">LogIn</button>
                             <p className='pt-5 flex justify-between items-center'>
                                 <p>Have an account <Link to='/signUp' className='text-orange-400'>SignUp</Link></p>
-                                <button className='btn' onClick={googleSignIn}>Google</button>
+                                <button className='btn' onClick={handleGoogleLogIn}>Google</button>
                             </p>
                         </div>
                     </form>

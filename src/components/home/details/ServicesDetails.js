@@ -34,7 +34,7 @@ const ServicesDetails = () => {
                 </div>
             </div>
             <div className="card bg-base-100">
-                <h2 className='text-center py-20 text-5xl font-bold'>Your Review</h2>
+                <h2 className='text-center py-20 text-5xl font-bold'>Customer Review</h2>
                 <figure>
                     <PhotoProvider>
                         <div className="foo">

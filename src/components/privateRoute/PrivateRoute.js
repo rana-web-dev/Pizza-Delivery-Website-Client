@@ -10,6 +10,7 @@ const PrivateRoute = ({children}) => {
             <h1 className='text-5xl'>Loading...</h1>
         </div>
     }
+    
     if(user){
         return children;
     }

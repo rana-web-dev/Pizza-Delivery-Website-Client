@@ -34,6 +34,7 @@ const AddReview = () => {
 
     }
 
+
     return (
         <div className='py-10 max-w-screen-xl mx-auto'>
             <h1 className='text-3xl text-center'>All Review: {review.length}</h1>
@@ -49,7 +50,7 @@ const AddReview = () => {
                 <br></br>
                 <textarea name='opinion' placeholder='Your Opinion...' className='border border-orange-400 w-full p-3 text-1xl' cols='' rows='5'></textarea>
                 <br></br>
-                <button className='btn border-none bg-orange-400'>Add Your Review</button>
+                <button  className='btn border-none bg-orange-400'>Add Your Review</button>
             </form>
         </div>
     );

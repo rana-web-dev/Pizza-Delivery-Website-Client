@@ -34,12 +34,15 @@ const AuthProvider = ({ children }) => {
     }
 
     const googleSignIn = () => {
-        signInWithPopup(auth, GoogleProvider)
-            .then(result => {
-                const user = result.user;
-                setUser(user);
-            })
-            .catch(error => console.log(error))
+        return signInWithPopup(auth, GoogleProvider);
+
+
+
+            // .then(result => {
+            //     const user = result.user;
+            //     setUser(user);
+            // })
+            // .catch(error => console.log(error))
     }
 
 

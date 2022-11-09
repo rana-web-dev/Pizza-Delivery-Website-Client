@@ -6,7 +6,7 @@ const ReviewAccess = ({ rev }) => {
         <div className="card bg-base-100 shadow-xl">
             <figure><img src={revImg} alt="Shoes" /></figure>
             <div className="card-body">
-                <h2 className="card-title">Nmae: {revName}</h2>
+                <h2 className="card-title">Name: {revName}</h2>
                 <p>{revDes}</p>
             </div>
         </div>
