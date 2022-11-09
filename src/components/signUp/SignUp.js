@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
 
 const SignUp = () => {
 
     const {createUser} = useContext(AuthContext);
+    const [check, setCheck] = useState();
 
     const handleSignUp = event => {
         event.preventDefault();
@@ -14,10 +15,9 @@ const SignUp = () => {
 
         createUser(email, password)
         .then(result => {
-            const user = result.user;
-            console.log(user);
+            setCheck('User Create Success.')
         })
-        .catch(error => console.log(error));
+        .catch(error => setCheck(error.message));
     }
 
     return (
@@ -29,21 +29,24 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <input type="text" name='name' placeholder="Name" className="input input-bordered" />
+                            <input type="text" name='name' placeholder="Name" className="input input-bordered" required/>
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" name='email' placeholder="Email" className="input input-bordered" />
+                            <input type="email" name='email' placeholder="Email" className="input input-bordered" required/>
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" name='password' placeholder="password" className="input input-bordered" />
+                            <input type="password" name='password' placeholder="password" className="input input-bordered" required/>
                         </div>
-                        <div className="form-control mt-6">
+                        <div className='text-orange-500'>
+                            {check}
+                        </div>
+                        <div className="form-control">
                             <button className="btn btn-primary">SignUp</button>
                             <p className='pt-5'>
                                 Have an account <Link to='/logIn' className='text-orange-400'>LogIn</Link>

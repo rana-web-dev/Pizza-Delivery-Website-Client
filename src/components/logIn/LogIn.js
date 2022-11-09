@@ -3,13 +3,11 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
 
 const LogIn = () => {
-
-
     const { logIn, googleSignIn} = useContext(AuthContext);
+
     const location = useLocation();
     const navigate = useNavigate();
-
-    const from = location.state?.form?.pathname || '/';
+    const from = location.state?.from?.pathname || '/';
 
     const handleLogIn = event => {
         event.preventDefault();
@@ -36,13 +34,13 @@ const LogIn = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" name='email' placeholder="Email" className="input input-bordered" />
+                            <input type="email" name='email' placeholder="Email" className="input input-bordered" required/>
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" name='password' placeholder="password" className="input input-bordered" />
+                            <input type="password" name='password' placeholder="password" className="input input-bordered" required/>
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">LogIn</button>

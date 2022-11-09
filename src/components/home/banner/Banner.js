@@ -3,10 +3,10 @@ import './banner.css';
 
 const Banner = () => {
     return (
-        <div className="hero">
+        <div className="hero hero-bg">
             <div className="hero-content flex-col lg:flex-row-reverse py-20">
                 <div className='lg:w-1/2 w-full'>
-                <img src={require('../../../images/pizza.png')} alt='' />
+                <img className='banner-img' src={require('../../../images/pizza.png')} alt='' />
                 </div>
                 <div className='lg:w-1/2 w-full'>
                     <h1 className="text-7xl font-bold">I will deliver pizza to your Home!</h1>
