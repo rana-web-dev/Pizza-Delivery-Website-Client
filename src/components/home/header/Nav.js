@@ -14,7 +14,7 @@ const Nav = () => {
             user?.email ?
             <>
             <Link to='/addServices' >Add Services</Link>
-            <Link to='/myReview' >My Review</Link>
+            <Link to='/allReviews' >My Review</Link>
             <Link to='/addReview' >Add Review</Link>
             <Link to='' onClick={logOut}>LogOut</Link>
             </>

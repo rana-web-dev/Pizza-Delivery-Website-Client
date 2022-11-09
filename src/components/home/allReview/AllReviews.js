@@ -18,11 +18,7 @@ const AllReviews = () => {
                     ></ReviewAccess>)
                 }
             </div>
-            <div>
-                <h2 className='text-3xl'>Add Your Opinion</h2>
-                <br></br>
-                <textarea className='border border-orange-400 w-full p-3 text-2xl' cols='' rows='5'></textarea>
-                <br></br>
+            <div className='text-center'>
                 <Link to='/addReview'>
                     <button className='btn border-none bg-orange-400'>Add Your Review</button>
                 </Link>

@@ -55,7 +55,7 @@ const AuthProvider = ({ children }) => {
 
     // Services API data load
     useEffect(() => {
-        fetch('http://localhost:5000/service')
+        fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setService(data))
     }, [])
