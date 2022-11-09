@@ -1,8 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
+import AddServices from "../components/home/addServices/AddServices";
+import AddReview from "../components/home/allReview/AddReview";
 import AllReviews from "../components/home/allReview/AllReviews";
 import Blogs from "../components/home/blog/Blogs";
 import ServicesDetails from "../components/home/details/ServicesDetails";
 import Home from "../components/home/home/Home";
+import MyReview from "../components/home/myReview/MyReview";
 import AllService from "../components/home/services/AllService";
 import LogIn from "../components/logIn/LogIn";
 import PrivateRoute from "../components/privateRoute/PrivateRoute";
@@ -33,7 +36,8 @@ const router = createBrowserRouter([
             },
             {
                 path: '/allReviews',
-                element: <PrivateRoute><AllReviews></AllReviews></PrivateRoute>
+                loader: () => fetch('http://localhost:5000/review'),
+                element: <AllReviews></AllReviews>
             },
             {
                 path: '/logIn',
@@ -42,6 +46,19 @@ const router = createBrowserRouter([
             {
                 path: '/signUp',
                 element: <SignUp></SignUp>
+            },
+            {
+                path: '/myReview',
+                element: <PrivateRoute><MyReview></MyReview></PrivateRoute>
+            },
+            {
+                path: '/addServices',
+                element: <PrivateRoute><AddServices></AddServices></PrivateRoute>
+            },
+            {
+                path: '/addReview',
+                loader: () => fetch('http://localhost:5000/review'),
+                element: <PrivateRoute><AddReview></AddReview></PrivateRoute>
             },
             {
                 path: '/details/:id',

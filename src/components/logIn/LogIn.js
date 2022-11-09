@@ -3,8 +3,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
 
 const LogIn = () => {
-    const { logIn, googleSignIn} = useContext(AuthContext);
-
+    const { logIn, googleSignIn, loading } = useContext(AuthContext);
+    
     const location = useLocation();
     const navigate = useNavigate();
     const from = location.state?.from?.pathname || '/';
@@ -20,13 +20,16 @@ const LogIn = () => {
                 const user = result.user;
                 console.log(user);
                 navigate(from, {replace: true})
+                if(loading){
+                    return <h1 className='text-5xl'>Loading...</h1>
+                }
             })
             .catch(error => console.log(error));
     }
 
 
     return (
-        <div className="hero bg-base-200 max-w-screen-xl mx-auto">
+        <div className="hero lg:min-h-screen max-w-screen-xl mx-auto">
             <div className="hero-content w-full lg:w-1/2">
                 <div className="card shadow-2xl bg-base-100 w-full">
                     <form onSubmit={handleLogIn} className="card-body w-full">
