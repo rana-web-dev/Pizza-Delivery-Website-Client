@@ -35,7 +35,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/allReviews",
-        loader: () => fetch("http://localhost:5000/review"),
+        loader: () =>
+          fetch("https://b6a11-server-rana-web-dev.vercel.app/review"),
         element: <AllReviews></AllReviews>,
       },
       {
@@ -64,7 +65,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/addReview",
-        loader: () => fetch("http://localhost:5000/review"),
+        loader: () =>
+          fetch("https://b6a11-server-rana-web-dev.vercel.app/review"),
         element: (
           <PrivateRoute>
             <AddReview></AddReview>
@@ -74,7 +76,9 @@ const router = createBrowserRouter([
       {
         path: "/details/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/service/${params.id}`),
+          fetch(
+            `https://b6a11-server-rana-web-dev.vercel.app/service/${params.id}`
+          ),
         element: <ServicesDetails></ServicesDetails>,
       },
     ],

@@ -60,7 +60,7 @@ const AuthProvider = ({ children }) => {
 
   // Services API data load
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("https://b6a11-server-rana-web-dev.vercel.app/services")
       .then((res) => res.json())
       .then((data) => setService(data));
   }, []);

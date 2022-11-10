@@ -21,7 +21,7 @@ const AddServices = () => {
       des: `${description}`,
     };
 
-    fetch("http://localhost:5000/services", {
+    fetch("https://b6a11-server-rana-web-dev.vercel.app/services", {
       method: "POST",
       headers: {
         "content-type": "application/json",

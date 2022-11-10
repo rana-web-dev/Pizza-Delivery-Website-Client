@@ -21,7 +21,7 @@ const AddReview = () => {
       revDes: `${opinion}`,
     };
 
-    fetch("http://localhost:5000/review", {
+    fetch("https://b6a11-server-rana-web-dev.vercel.app/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",

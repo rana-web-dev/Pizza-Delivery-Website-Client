@@ -21,7 +21,7 @@ const AllReviews = () => {
   const handleReviewDelete = (id) => {
     const processed = window.confirm("Are you sure to delete?");
     if (processed) {
-      fetch(`http://localhost:5000/review/${id}`, {
+      fetch(`https://b6a11-server-rana-web-dev.vercel.app/review/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
