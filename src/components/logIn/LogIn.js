@@ -1,4 +1,5 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider";
 import useTitle from "../../title/title";
@@ -6,7 +7,7 @@ import useTitle from "../../title/title";
 const LogIn = () => {
   useTitle("Login");
   const { logIn, googleSignIn, loading } = useContext(AuthContext);
-
+  const [userCreateSuccess, setUserLogInSuccess] = useState('');
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state?.from?.pathname || "/";
@@ -34,6 +35,8 @@ const LogIn = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        setUserLogInSuccess('User LogIn Successfully');
+        toast('User LogIn Successfully');
         navigate(from, { replace: true });
         if (loading) {
           return <h1 className="text-5xl">Loading...</h1>;
@@ -44,6 +47,7 @@ const LogIn = () => {
 
   return (
     <div className="hero lg:min-h-screen max-w-screen-xl mx-auto">
+      <ToastContainer />
       <div className="hero-content w-full lg:w-1/2">
         <div className="card shadow-2xl bg-base-100 w-full">
           <form onSubmit={handleLogIn} className="card-body w-full">
@@ -73,6 +77,7 @@ const LogIn = () => {
             </div>
             <div className="form-control mt-6">
               <button className="btn btn-primary">LogIn</button>
+              <p>{userCreateSuccess}</p>
               <p className="pt-5 flex justify-between items-center">
                 <p>
                   Have an account{" "}

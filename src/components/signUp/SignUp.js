@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
 
@@ -15,13 +16,17 @@ const SignUp = () => {
 
         createUser(email, password)
         .then(result => {
-            setCheck('User Create Success.')
+            setCheck('User Create Success.');
+            toast('User Create Successfully');
+            console.log(result);
+            form.reset();
         })
         .catch(error => setCheck(error.message));
     }
 
     return (
         <div className="hero bg-base-200 max-w-screen-xl mx-auto">
+            <ToastContainer />
             <div className="hero-content w-full lg:w-1/2">
                 <div className="card w-full shadow-2xl bg-base-100">
                     <form onSubmit={handleSignUp} className="card-body w-full">
