@@ -44,7 +44,7 @@ const AddServices = () => {
 
   return (
     <div className="max-w-screen-xl mx-auto py-20">
-      <form onSubmit={handleServices}>
+      <form className="mx-5" onSubmit={handleServices}>
         <h2 className="text-3xl">Add New Services</h2>
         <br></br>
         <input
@@ -83,7 +83,7 @@ const AddServices = () => {
           required
         ></textarea>
         <br></br>
-        <button className="btn border-none bg-orange-400">
+        <button className="btn border-none mt-5 bg-orange-400">
           Add New Service
         </button>
         <ToastContainer />

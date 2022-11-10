@@ -8,7 +8,6 @@ const ServicesDetails = () => {
     // Add Dynamic Title
     useTitle('Services Details')
 
-
     const data = useLoaderData();
     const { id, img, title, des, price, revImg, revName, revDes } = data;
 

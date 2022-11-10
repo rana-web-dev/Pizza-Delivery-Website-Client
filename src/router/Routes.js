@@ -8,6 +8,7 @@ import Home from "../components/home/home/Home";
 import MyReview from "../components/home/myReview/MyReview";
 import AllService from "../components/home/services/AllService";
 import LogIn from "../components/logIn/LogIn";
+import NotFound from "../components/notFound/NotFound";
 import PrivateRoute from "../components/privateRoute/PrivateRoute";
 import SignUp from "../components/signUp/SignUp";
 import Main from "../layout/Main";
@@ -83,6 +84,10 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path:'*',
+    element: <NotFound></NotFound>
+  }
 ]);
 
 export default router;

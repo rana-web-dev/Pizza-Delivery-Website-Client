@@ -43,7 +43,7 @@ const AddReview = () => {
     <div className="py-10 max-w-screen-xl mx-auto">
       <h1 className="text-3xl text-center">All Review: {review.length}</h1>
 
-      <form onSubmit={handleReview}>
+      <form className="mx-5 mt-10" onSubmit={handleReview}>
         <h2 className="text-3xl">Add Your Opinion</h2>
         <br></br>
         <input
@@ -73,7 +73,7 @@ const AddReview = () => {
           rows="5"
         ></textarea>
         <br></br>
-        <button className="btn border-none bg-orange-400">
+        <button className="btn mt-5 border-none bg-orange-400">
           Add Your Review
         </button>
       </form>

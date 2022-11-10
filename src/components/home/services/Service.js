@@ -12,7 +12,7 @@ const Service = () => {
   const serviceDataSlice = [...serviceData].reverse().slice(0, 3);
 
   return (
-    <div className="max-w-screen-xl mx-auto py-20">
+    <div className="max-w-screen-xl mx-auto py-20 px-5">
       <h1 className="pb-4 text-5xl text-center font-semibold">
         I will deliver below type of Pizza,<br></br>This service will be quick
         on time.{" "}

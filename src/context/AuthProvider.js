@@ -40,12 +40,6 @@ const AuthProvider = ({ children }) => {
 
   const googleSignIn = () => {
     return signInWithPopup(auth, GoogleProvider);
-
-    // .then(result => {
-    //     const user = result.user;
-    //     setUser(user);
-    // })
-    // .catch(error => console.log(error))
   };
 
   useEffect(() => {
