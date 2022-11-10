@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthProvider";
 import useTitle from "../../../title/title";
@@ -7,7 +8,6 @@ import ReviewAccess from "./ReviewAccess";
 const AllReviews = () => {
   useTitle("All Review");
   const reviewData = useLoaderData();
-  console.log(reviewData);
   const [reviews, setReview] = useState(reviewData);
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -28,7 +28,9 @@ const AllReviews = () => {
         .then((data) => {
           console.log(data);
           if (data.deletedCount > 0) {
-            const remaining = reviewData.filter((ord) => ord._id !== id);
+            toast("Review Delete Successfully.");
+            const remaining = reviewData.filter((review) => review._id !== id);
+            console.log(data);
             setReview(remaining);
           }
         })
@@ -55,6 +57,7 @@ const AllReviews = () => {
         >
           Add Your Review
         </button>
+        <ToastContainer />
       </div>
     </div>
   );

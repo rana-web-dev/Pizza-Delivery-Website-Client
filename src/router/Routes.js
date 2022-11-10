@@ -12,63 +12,73 @@ import PrivateRoute from "../components/privateRoute/PrivateRoute";
 import SignUp from "../components/signUp/SignUp";
 import Main from "../layout/Main";
 
-
 const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Main></Main>,
-        children: [
-            {
-                path: '/',
-                element: <Home></Home>
-            },
-            {
-                path: '/home',
-                element: <Home></Home>
-            },
-            {
-                path: '/blog',
-                element: <Blogs></Blogs>
-            },
-            {
-                path: '/allServices',
-                element: <AllService></AllService>
-            },
-            {
-                path: '/allReviews',
-                loader: () => fetch('http://localhost:5000/review'),
-                element: <AllReviews></AllReviews>
-            },
-            {
-                path: '/logIn',
-                element: <LogIn></LogIn>
-            },
-            {
-                path: '/signUp',
-                element: <SignUp></SignUp>
-            },
-            {
-                path: '/myReview',
-                element: <PrivateRoute><MyReview></MyReview></PrivateRoute>
-            },
-            {
-                path: '/addServices',
-                element: <PrivateRoute><AddServices></AddServices></PrivateRoute>
-            },
-            {
-                path: '/addReview',
-                loader: () => fetch('http://localhost:5000/review'),
-                element: <PrivateRoute><AddReview></AddReview></PrivateRoute>
-            },
-            {
-                path: '/details/:id',
-                loader: ({params}) => fetch(`http://localhost:5000/service/${params.id}`) ,
-                element: <ServicesDetails></ServicesDetails>
-            }
-        ]
-    }
-    
-])
-
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/home",
+        element: <Home></Home>,
+      },
+      {
+        path: "/blog",
+        element: <Blogs></Blogs>,
+      },
+      {
+        path: "/allServices",
+        element: <AllService></AllService>,
+      },
+      {
+        path: "/allReviews",
+        loader: () => fetch("http://localhost:5000/review"),
+        element: <AllReviews></AllReviews>,
+      },
+      {
+        path: "/logIn",
+        element: <LogIn></LogIn>,
+      },
+      {
+        path: "/signUp",
+        element: <SignUp></SignUp>,
+      },
+      {
+        path: "/myReview",
+        element: (
+          <PrivateRoute>
+            <MyReview></MyReview>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/addServices",
+        element: (
+          <PrivateRoute>
+            <AddServices></AddServices>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/addReview",
+        loader: () => fetch("http://localhost:5000/review"),
+        element: (
+          <PrivateRoute>
+            <AddReview></AddReview>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/details/:id",
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/service/${params.id}`),
+        element: <ServicesDetails></ServicesDetails>,
+      },
+    ],
+  },
+]);
 
 export default router;
