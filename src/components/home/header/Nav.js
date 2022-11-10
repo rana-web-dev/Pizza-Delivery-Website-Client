@@ -8,8 +8,8 @@ const Nav = () => {
     const {user, logOut} = useContext(AuthContext);
 
     const items = <>
-        <Link to='/home'>Home</Link>,
-        <Link to='/blog'>Blogs</Link>,
+        <Link to='/home'>Home</Link>
+        <Link to='/blog'>Blogs</Link>
         {
             user?.email ?
             <>
